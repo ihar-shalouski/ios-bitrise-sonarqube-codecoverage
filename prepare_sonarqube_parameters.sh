@@ -13,8 +13,8 @@ if [ -n "$BITRISE_PULL_REQUEST" ]; then
 else
   SONAR_PROPS+=("sonar.branch.name=$BITRISE_GIT_BRANCH")
   if [ "$BITRISE_GIT_BRANCH" = "develop" ]; then
-    SONAR_PROPS+=("sonar.newCode.referenceBranch=master")
-  elif [ "$BITRISE_GIT_BRANCH" != "master" ]; then
+    SONAR_PROPS+=("sonar.newCode.referenceBranch=main")
+  elif [ "$BITRISE_GIT_BRANCH" != "main" ]; then
     SONAR_PROPS+=("sonar.newCode.referenceBranch=develop")
   fi
 fi
